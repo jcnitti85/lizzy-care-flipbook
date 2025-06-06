@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lizzy Care Flipbook</title>
+  <script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #flipbook {
+      width: 90vw;
+      height: 90vh;
+    }
+    #flipbook .page {
+      background-color: white;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="flipbook">
+    <div class="page" style="background-image: url('page1_front_cover.png');"></div>
+    <div class="page" style="background-image: url('page2_insert.png');"></div>
+    <div class="page" style="background-image: url('page3_insert.png');"></div>
+    <div class="page" style="background-image: url('page4_back.png');"></div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#flipbook').turn({
+        autoCenter: true
+      });
+    });
+  </script>
+</body>
+</html>
